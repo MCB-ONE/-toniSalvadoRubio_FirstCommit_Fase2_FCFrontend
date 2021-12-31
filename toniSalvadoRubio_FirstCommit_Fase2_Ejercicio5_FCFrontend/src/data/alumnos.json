@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1, "nombre": "Álvaro Sánchez Monteagudo", "ciudad": "Valencia", "país": "España", "teléfono": "+34 657 85 25 46", "email": "smonteagudo@gmail.com", "etiquetas": ["HTML&CSS", "ANGULAR", "JAVA", "PHP"]
+    },
+    {
+      "id": 2, "nombre": "Amparo Herrera Climent", "ciudad": "Sevilla", "país": "España", "teléfono": "+34 654 55 98 56", "email": "aherreracliment@gmail.com", "etiquetas": ["HTML&CSS", "REACT", "JAVA", "PHP"]
+    },
+    {
+      "id": 3, "nombre": "Manuel Jimenéz Santos", "ciudad": "Berlín", "país": "Alemania", "teléfono": "+34 634 45 22 56", "email": "manujimenez@gmail.com", "etiquetas": ["JAVA", "PHP"]
+    },
+    {
+      "id": 4, "nombre": "Cristina Bea Martos", "ciudad": "Barcelona", "país": "España", "teléfono": "+34 684 99 56 70", "email": "cristibea_martos@gmail.com", "etiquetas": ["REACT", "HTML&CSS"]
+    },
+    {
+      "id": 5, "nombre": "Jordi Rubio Roses", "ciudad": "Barcelona", "país": "España", "teléfono": "+34 600 57 32 11", "email": "rosesrubio@gmail.com", "etiquetas": ["C#", "JAVA"]
+    },
+    {
+      "id": 6, "nombre": "Markus Estein Vomel", "ciudad": "Berlín", "país": "Alemania", "teléfono": "+34 604 90 50 00", "email": "markstein@gmail.com", "etiquetas": ["C#", "JAVA", "REACT", "HTML&CSS"]
+    },
+    {
+      "id": 7, "nombre": "Shein McCain Black", "ciudad": "Londres", "país": "UK", "teléfono": "+34 611 92 11 60", "email": "shein_mckein@gmail.com", "etiquetas": ["HTML&CSS", "PHP"]
+    },
+    {
+      "id": 8, "nombre": "kate Lovely Ress", "ciudad": "Manchester", "país": "UK", "teléfono": "+34 684 22 56 30", "email": "resslovely@gmail.com", "etiquetas": ["HTML&CSS", "REACT"]
+    },
+    {
+      "id": 9, "nombre": "Enrique Sánchez Rius", "ciudad": "Málaga", "país": "España", "teléfono": "+34 611 39 33 71", "email": "esanchezrius@gmail.com", "etiquetas": ["HTML&CSS", "ANGULAR"]
+    },
+    {
+      "id": 10, "nombre": "Marcos Ruiz Rius", "ciudad": "Las Palmas", "país": "España", "teléfono": "+34 689 65 06 0d0", "email": "mruiz_90@gmail.com", "etiquetas": ["HTML&CSS", "SYPHONY "]
+    }
+  ]
