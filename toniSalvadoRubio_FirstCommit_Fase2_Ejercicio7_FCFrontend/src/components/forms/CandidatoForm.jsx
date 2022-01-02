@@ -1,30 +1,34 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import Select from 'react-select';
 import { CgClose } from 'react-icons/cg';
 /* Tag options */
 const tags = [
-  { value: 'react', label: 'React' },
-  { value: 'html&css', label: 'Htmal&Css' },
-  { value: 'angular', label: 'Angular' },
-  { value: 'java', label: 'Java' },
-  { value: 'javascript', label: 'JavaScript' },
-  { value: 'csharp', label: 'C#' },
-  { value: 'php', label: 'Php' },
-  { value: 'flutter', label: 'Flutter' },
+  { value: 'react', label: 'React', id: 1 },
+  { value: 'html&css', label: 'Htmal&Css', id: 2 },
+  { value: 'angular', label: 'Angular', id: 3 },
+  { value: 'java', label: 'Java', id: 4 },
+  { value: 'javascript', label: 'JavaScript', id: 5 },
+  { value: 'csharp', label: 'C#', id: 6 },
+  { value: 'php', label: 'Php', id: 7 },
+  { value: 'flutter', label: 'Flutter', id: 8 },
 ];
 
 const CandidatoForm = () => {
   const [selectedTags, setSelectedTags] = useState(null);
 
   const handleTagsChange = (e) => {
-    // eslint-disable-next-line no-console
-    console.log(e.value);
     setSelectedTags(e);
   };
 
-  /* const deleteTags = (value) => {
+  const deleteTag = (value) => {
+    const newState = selectedTags.filter((tag) => {
+      return tag.id !== value;
+    });
+    console.log(newState);
+    setSelectedTags(newState);
+  };
 
-} */
   return (
     <div className="candidate-form">
       <div className="profile">
@@ -52,7 +56,7 @@ const CandidatoForm = () => {
         </div>
         <div className="col-6">
           <label htmlFor="pais" className="form-label">País</label>
-          <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg pais" name="pais">
+          <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg pais" name="pais" defaultValue="españa">
             <option selected>España</option>
             <option value="1">Argentina</option>
             <option value="2">Francia</option>
@@ -61,7 +65,7 @@ const CandidatoForm = () => {
         </div>
         <div className="col-6">
           <label htmlFor="ciudad" className="form-label">Ciudad</label>
-          <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg ciudad" name="ciudad">
+          <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg ciudad" name="ciudad" defaultValue="barcelona">
             <option selected>Barcelona</option>
             <option value="1">Madrid</option>
             <option value="2">Bilbao</option>
@@ -70,14 +74,14 @@ const CandidatoForm = () => {
         </div>
         <div className="col-6">
           <label htmlFor="traslado" className="form-label">Traslado</label>
-          <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg traslado" name="traslado">
+          <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg traslado" name="traslado" defaultValue={0}>
             <option selected value="0">No</option>
             <option value="1">Si</option>
           </select>
         </div>
         <div className="col-6">
           <label htmlFor="presencialidad" className="form-label">Presencialidad</label>
-          <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg presencialidad" name="presencialidad">
+          <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg presencialidad" name="presencialidad" defaultValue={0}>
             <option selected value={0}>En remoto</option>
             <option value={1}>Presencial</option>
           </select>
@@ -104,9 +108,9 @@ const CandidatoForm = () => {
               : (
                 <div id="tag-list" className="tag-list">
                   {selectedTags.map((t) => (
-                    <span>
+                    <span key={t.id}>
                       {t.label}
-                      <CgClose />
+                      <CgClose onClick={() => deleteTag(t.id)} />
                     </span>
                   ))}
                 </div>
